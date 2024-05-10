@@ -204,18 +204,23 @@
             temp.className = feelsLike ? "feelsLike" : "";
             city.innerHTML = data.name;
             description.innerHTML = data.weather[0].description;
-            lastUpdate.innerHTML = momentWithCorrectUtcOffset(new Date()).format(timeFormat) + "/" + momentWithCorrectUtcOffset(new Date(data.dt * 1000)).format(timeFormat);
 
-            date.innerHTML = momentWithCorrectUtcOffset(new Date()).format("dd, ll");
 
             var sunrise = momentWithCorrectUtcOffset(new Date(data.sys.sunrise * 1000));
             var sunset = momentWithCorrectUtcOffset(new Date(data.sys.sunset * 1000));
 
             _sunriseHour = sunrise.hour();
             _sunsetHour = sunset.hour();
-
-            sun.innerHTML = "<i class='" + getMoonIconClasses(getCurrentMoonPhase(), isNightMode()) + "'></i>&nbsp;&nbsp;<i class='wi wi-sunrise'></i> " + sunrise.format(timeFormat)
+            const date = momentWithCorrectUtcOffset(new Date()).format("dd, ll");
+            const sun = "<i class='" + getMoonIconClasses(getCurrentMoonPhase(), isNightMode()) + "'></i>&nbsp;&nbsp;<i class='wi wi-sunrise'></i> " + sunrise.format(timeFormat)
                     + "&nbsp;&nbsp;<i class='wi wi-sunset'></i> " + sunset.format(timeFormat);
+
+
+            lastUpdate.innerHTML = momentWithCorrectUtcOffset(new Date()).format(timeFormat) + " <span id='smaller'>"+ date + " " + sun + "</span>";
+
+            date.innerHTML = 'Hello Xavier!';
+
+            sun.innerHTML = 'Happy codding!! :)';
             //  alert(data.name);
             setNightMode();
             setMoonIconsRotation(data.coord.lat)

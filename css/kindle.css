@@ -59,8 +59,8 @@ html.night {
 }
 
 #lastUpdate {
-    font-size: 10px;
-    font-size: 1.4rem;
+    font-size: 30px;
+    font-size: 2.8rem;
     position: absolute;
     bottom: 47%;
     left: 3.3%;
@@ -173,8 +173,8 @@ html.night {
 }
 
 .landscape #lastUpdate {
-    font-size: 7.1px;
-    font-size: 1.4rem;
+    font-size: 35.4px;
+    font-size: 7rem;
 }
 
 .landscape #description {
@@ -222,4 +222,8 @@ html.night {
 
 .feelsLike, .feelsLike * {
     font-style: italic;
+}
+
+.smaller {
+    font-size: 4rem;
 }
