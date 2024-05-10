@@ -15,7 +15,7 @@ var refreshTime = 5 * 60 * 1000;
 
 // Browser in kindle paperwhite doesn't support rotation.
 // You can override with this parameter 'll' and 'lr' for landscape left/right, 'up' for upside down.
-//var rotation = "ll";
+var rotation = "lr";
 
 // You can set night mode,
 // "auto" - by sunrise and sunset,
