@@ -66,14 +66,14 @@
 
 
         function refreshActualWeather() {
-            jsonp.request("http://api.openweathermap.org/data/2.5/weather?" + _apiParams + "&callback=jsonp.response" + "&_timestamp=" + (new Date()).getTime()
+            jsonp.request("https://api.openweathermap.org/data/2.5/weather?" + _apiParams + "&callback=jsonp.response" + "&_timestamp=" + (new Date()).getTime()
                 , function (data) {
                     processActualWeather(data);
                 }, "actual");
         }
 
         function refreshForecastWeather() {
-            jsonp.request("http://api.openweathermap.org/data/2.5/forecast?" + _apiParams + "&callback=jsonp.response" + "&_timestamp=" + (new Date()).getTime()
+            jsonp.request("https://api.openweathermap.org/data/2.5/forecast?" + _apiParams + "&callback=jsonp.response" + "&_timestamp=" + (new Date()).getTime()
                 , function (data) {
                     processForecastWeather(data);
                 }, "forecast");
@@ -227,7 +227,7 @@
         }
 
         /**
-         * http://www.ben-daglish.net/moon.shtml
+         * https://www.ben-daglish.net/moon.shtml
          * @param year
          * @param month
          * @param day
@@ -475,7 +475,7 @@
             setRem("resize");
         });
 
-        // Simulating vh an vw with rem: http://stackoverflow.com/questions/13948713/is-there-any-cross-browser-javascript-for-making-vh-and-vw-units-work
+        // Simulating vh an vw with rem: https://stackoverflow.com/questions/13948713/is-there-any-cross-browser-javascript-for-making-vh-and-vw-units-work
         // But kindle 4 doesn't support rem (so all sizes are fixed fallback for kindle 4)
         // Kindle 4 viewport: 600x706 (landscape 800x506) (in window.load event, window.resize event is not called)
         // Paperwhite 3 viewport: 1072x1268 (in window.load event it is 0x0, in window.resized
