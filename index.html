@@ -211,16 +211,16 @@
 
             _sunriseHour = sunrise.hour();
             _sunsetHour = sunset.hour();
-            const date = momentWithCorrectUtcOffset(new Date()).format("dd, ll");
-            const sun = "<i class='" + getMoonIconClasses(getCurrentMoonPhase(), isNightMode()) + "'></i>&nbsp;&nbsp;<i class='wi wi-sunrise'></i> " + sunrise.format(timeFormat)
+            const dateText = momentWithCorrectUtcOffset(new Date()).format("dd, ll");
+            const sunText = "<i class='" + getMoonIconClasses(getCurrentMoonPhase(), isNightMode()) + "'></i>&nbsp;&nbsp;<i class='wi wi-sunrise'></i> " + sunrise.format(timeFormat)
                     + "&nbsp;&nbsp;<i class='wi wi-sunset'></i> " + sunset.format(timeFormat);
 
 
-            lastUpdate.innerHTML = momentWithCorrectUtcOffset(new Date()).format(timeFormat) + " <span id='smaller'>"+ date + " " + sun + "</span>";
+            lastUpdate.innerHTML = momentWithCorrectUtcOffset(new Date()).format(timeFormat) + " <span id='smaller'>"+ dateText + "</span>";
 
             date.innerHTML = 'Hello Xavier!';
 
-            sun.innerHTML = 'Happy codding!! :)';
+            sun.innerHTML = sunText
             //  alert(data.name);
             setNightMode();
             setMoonIconsRotation(data.coord.lat)
