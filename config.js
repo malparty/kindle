@@ -11,7 +11,7 @@ var api_units = "metric";
 var api_params = null;
 
 // refresh time in miliseconds (default 30 mins)
-var refreshTime = 5 * 60 * 1000;
+var refreshTime = 2 * 60 * 1000;
 
 // Browser in kindle paperwhite doesn't support rotation.
 // You can override with this parameter 'll' and 'lr' for landscape left/right, 'up' for upside down.

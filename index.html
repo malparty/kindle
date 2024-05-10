@@ -202,7 +202,7 @@
             icon.style.webkitTransform = null;
             temp.innerHTML = feelsLike ? Math.round(data.main.feels_like) : Math.round(data.main.temp);
             temp.className = feelsLike ? "feelsLike" : "";
-            city.innerHTML = data.name;
+            city.innerHTML = data.name === 'Turan' ? 'Da Nang' : data.name;
             description.innerHTML = data.weather[0].description;
 
 
